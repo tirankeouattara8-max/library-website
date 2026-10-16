@@ -1,0 +1,74 @@
+:root {
+  --primary-color: #004080;
+  --secondary-color: #f2f2f2;
+  --accent-color: #ff9900;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--secondary-color);
+}
+
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav input, nav select {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.book-card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-color);
+}
+
+button {
+  background: var(--accent-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #cc7a00;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
